@@ -70,10 +70,11 @@ function get_files() {
   });
 }
 
+
 // Handle downloadable data files and scripts (on click and at start).
 $(".tutorial_files").each(function() {
     var h2 = $("h2:first", this);
-    h2.prepend("<span onclick=get_files() title=\"Download Zip Archive\" class='download_files glyphicon glyphicon-download'></span>");
+    h2.prepend("<span id=\"dzaonclick\" onclick=get_files() title=\"Download Zip Archive\" class='download_files glyphicon glyphicon-download'></span>");
     //h2.append("<span class='fold-unfold glyphicon glyphicon-collapse-down'></span>");
 
     var ul = document.createElement('ul');
